@@ -162,6 +162,8 @@ class _LoanCalculatorState extends State<LoanCalculator> {
                                     },
                                   ),
 
+                                  Padding(
+                                      padding: const EdgeInsets.symmetric(vertical: 16.0)),
                                   Align(
                                     alignment: Alignment.center,
                                     child: Column(
