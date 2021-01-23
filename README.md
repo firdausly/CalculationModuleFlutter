@@ -5,7 +5,7 @@
 ## Screenshot
 
 
-<table style="border: none">
+<table style="border: none !important;">
 <tr>
  <td>
   Main Page<br>
