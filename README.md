@@ -38,7 +38,7 @@ Currency Converter<br>
  
  <a href="https://www.calculatorsoup.com/calculators/financial/loan-calculator-simple.php">Formula for the loan Calculator
    <br>
-<img src="/screenshot/formula.JPG" >
+<img src="/screenshot/formula.JPG" width="250" >
 </a>
 
 
