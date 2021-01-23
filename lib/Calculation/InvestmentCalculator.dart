@@ -207,45 +207,54 @@ void investCalculator() {
                                                     textAlign: TextAlign.center),
                                               )),
 
-                                          Container(
-                                            padding: EdgeInsets.all(40),
-                                            decoration: BoxDecoration(
-                                              color: Colors.blueGrey.shade50,
-                                              borderRadius: BorderRadius.only(
-                                                  topLeft: Radius.circular(5),
-                                                  topRight: Radius.circular(5),
-                                                  bottomLeft: Radius.circular(5),
-                                                  bottomRight: Radius.circular(5)
+                                          if(duration.isNotEmpty && totalInvest.isNotEmpty
+                                              && totalInvest.isNotEmpty)
+                                          Card(
+                                            elevation:4,
+
+                                            child: Padding(
+                                              padding: const EdgeInsets.all(16.0),
+                                              child: Column(
+                                                crossAxisAlignment: CrossAxisAlignment.stretch,
+                                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                                children: <Widget>[
+
+
+
+                                                    Container(
+                                                      alignment:Alignment.center,
+                                                      child: Column(
+                                                        children: [
+                                                          Text('Your Final Balance after '+duration+' year :',
+                                                              style: TextStyle(fontSize: 18)),
+
+                                                          Text(totalValue,
+                                                              style: TextStyle(fontSize: 18)),
+                                                          Padding(
+                                                              padding: const EdgeInsets.symmetric(vertical: 16.0)),
+
+                                                          Text('You Earn ',
+                                                              style: TextStyle(fontSize: 18)),
+                                                          Text(totalInvest,
+                                                              style: TextStyle(fontSize: 18))
+
+
+
+                                                        ],
+                                                      ),
+                                                    ),
+
+
+
+
+
+
+
+
+
+                                                ],
                                               ),
-                                              boxShadow: [
-                                                BoxShadow(
-                                                    color: Colors.grey.withOpacity(0.5),
-                                                    spreadRadius: 1,
-                                                    blurRadius: 5,
-                                                    offset: Offset(0, 3)
-                                                )] ,
-
                                             ),
-
-                                            child: Column(
-                                              children: <Widget>[
-
-                                                Text('Your Final Balance after '+duration+' year :',
-                                                    style: TextStyle(fontSize: 18)),
-
-                                                Text(totalValue,
-                                                    style: TextStyle(fontSize: 18)),
-                                                Padding(
-                                                    padding: const EdgeInsets.symmetric(vertical: 16.0)),
-
-                                                Text('You Earn ',
-                                                    style: TextStyle(fontSize: 18)),
-                                                Text(totalInvest,
-                                                    style: TextStyle(fontSize: 18))
-
-                                              ],
-                                            )
-
                                           ),
 
 

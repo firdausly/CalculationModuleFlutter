@@ -47,30 +47,32 @@ class _SplitBill extends State {
                                     padding: const EdgeInsets.symmetric(vertical: 16.0)),
 
 
-                                TextFormField(
-                                  keyboardType: TextInputType.number,
-                                  controller: peopleController,
-                                  onChanged: (value){
 
-                                    if (_formKey.currentState.validate()) {
-                                    double people = double.parse(peopleController.text);
-                                    double amount = double.parse(amountController.text);
+                                  TextFormField(
+                                    keyboardType: TextInputType.number,
+                                    controller: peopleController,
+                                    onChanged: (value){
 
-                                     splitAmount = amount/people;
-                                      _changeText(splitAmount);
-                                    }},
-                                  decoration: const InputDecoration(
-                                    icon: const Icon(Icons.people),
-                                    labelText: 'No of People',
-                                    hintText: 'Enter how many people to split bill',
+                                      if (_formKey.currentState.validate()) {
+                                      double people = double.parse(peopleController.text);
+                                      double amount = double.parse(amountController.text);
+
+                                       splitAmount = amount/people;
+                                        _changeText(splitAmount);
+                                      }},
+                                    decoration: const InputDecoration(
+                                      icon: const Icon(Icons.people),
+                                      labelText: 'No of People',
+                                      hintText: 'Enter how many people to split bill',
+                                    ),
+                                    validator: (value) {
+                                      if (value.isEmpty) {
+                                        return 'Please enter how many people to split bill';
+                                      }
+                                      return null;
+                                    },
                                   ),
-                                  validator: (value) {
-                                    if (value.isEmpty) {
-                                      return 'Please enter how many people to split bill';
-                                    }
-                                    return null;
-                                  },
-                                ),
+
 
                                 Padding(
                                     padding: const EdgeInsets.symmetric(vertical: 16.0)),
