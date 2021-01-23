@@ -90,9 +90,9 @@ class _CurrencyConverterState extends State {
                     Padding(
                         padding: const EdgeInsets.symmetric(vertical: 16.0)),
 
-                    Text('Amount:'),
+
                     Container(
-                      width:150,
+                      width:200,
                       child: TextFormField(
                         keyboardType: TextInputType.number,
                         controller: amountController,
@@ -101,10 +101,12 @@ class _CurrencyConverterState extends State {
                         },
                         decoration: const InputDecoration(
                           hintText: 'Amount to convert',
+                          labelText: 'Amount',
+                          icon: Icon(Icons.money),
                         ),
                         validator: (value) {
                           if (value.isEmpty) {
-                            return 'Please enter total investment';
+                            return 'Please enter Amount';
                           }
                           return null;
                         },
